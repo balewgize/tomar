@@ -4,7 +4,7 @@
     aria-label="My nav bar"
   >
     <div class="container">
-      <a class="navbar-brand" href="/">Tomar</a>
+      <router-link to="/" class="navbar-brand">Tomar</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -20,17 +20,17 @@
       <div class="collapse navbar-collapse" id="navLinks">
         <ul class="navbar-nav ms-auto mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/">Write</a>
+            <a class="nav-link" aria-current="page" href="#">Write</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Authors</a>
           </li>
           <!-- If not authenticated -->
           <li class="nav-item">
-            <a class="nav-link" href="#">Sign in</a>
+            <router-link to="/login" class="nav-link">Sign in</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="signup" href="#">Get Started</a>
+            <router-link to="/register" class="nav-link" id="signup">Get Started</router-link>
           </li>
         </ul>
       </div>
