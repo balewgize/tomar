@@ -37,7 +37,7 @@
                   v-for="(error, index) of v$.form.password.$errors"
                   :key="index"
                 >
-                  <div class="error-msg">{{ error.$message }}</div>
+                  <p class="error-msg">{{ error.$message }}</p>
                 </div>
               </div>
 
