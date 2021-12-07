@@ -1,0 +1,70 @@
+<template>
+  <nav
+    class="navbar navbar-expand-lg navbar-light bg-white mynav mb-3"
+    aria-label="My nav bar"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="/">Tomar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navLinks"
+        aria-controls="navLinks"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navLinks">
+        <ul class="navbar-nav ms-auto mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Write</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Authors</a>
+          </li>
+          <!-- If not authenticated -->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="signup" href="#">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: "NavBar",
+};
+</script>
+<style scoped>
+.mynav {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 2px 2px -1px rgba(22, 16, 16, 0.2);
+  padding: 12px;
+}
+.navbar-brand {
+  font-weight: 500;
+}
+#navLinks ul {
+  display: flex;
+  align-items: center;
+}
+#navLinks ul li {
+  margin-left: 15px;
+  font-size: 1.1rem;
+}
+#signup {
+  border-radius: 30px;
+  /* font-weight: 600; */
+  padding: 8px 20px;
+  color: #fff;
+  background-color: #0078f0;
+}
+</style>
