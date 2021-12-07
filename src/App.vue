@@ -1,14 +1,14 @@
 <template>
   <div>
     <NavBar />
-    <div class="container main">
+    <div class="container-fluid main">
       <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue"
+import NavBar from "./components/NavBar.vue";
 
 export default {
   name: "App",
@@ -19,5 +19,7 @@ export default {
 </script>
 
 <style>
-
+.main {
+  background: rgb(250, 250, 250);
+}
 </style>

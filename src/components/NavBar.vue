@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar navbar-expand-lg navbar-light bg-white mynav mb-3"
+    class="navbar navbar-expand-lg navbar-light bg-white mynav"
     aria-label="My nav bar"
   >
     <div class="container">
@@ -30,7 +30,9 @@
             <router-link to="/login" class="nav-link">Sign in</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/register" class="nav-link" id="signup">Get Started</router-link>
+            <router-link to="/register" class="nav-link" id="signup"
+              >Get Started</router-link
+            >
           </li>
         </ul>
       </div>
@@ -62,7 +64,6 @@ export default {
 }
 #signup {
   border-radius: 30px;
-  /* font-weight: 600; */
   padding: 8px 20px;
   color: #fff;
   background-color: #0078f0;
