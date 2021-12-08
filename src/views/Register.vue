@@ -8,8 +8,8 @@
               Sign up to Tomar
             </h5>
             <form @submit.prevent="onSubmit">
-              <div class="d-flex">
-                <div class="form-floating mb-3 me-2">
+              <div class="full-name">
+                <div class="form-floating mb-3">
                   <input
                     type="text"
                     class="form-control"
@@ -26,7 +26,7 @@
                     <p class="error-msg">{{ error.$message }}</p>
                   </div>
                 </div>
-                <div class="form-floating mb-3 ms-2">
+                <div class="form-floating mb-3">
                   <input
                     type="text"
                     class="form-control"
@@ -92,7 +92,7 @@
               <hr class="my-4" />
               <div>
                 Already have an account? &nbsp;
-                <router-link :to="{name: 'login'}"> Sign in</router-link>
+                <router-link :to="{ name: 'login' }"> Sign in</router-link>
               </div>
             </form>
           </div>
@@ -175,5 +175,10 @@ export default {
 }
 .error-msg {
   color: red;
+}
+.full-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 </style>

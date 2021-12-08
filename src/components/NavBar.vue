@@ -4,7 +4,9 @@
     aria-label="My nav bar"
   >
     <div class="container">
-      <router-link :to="{name: 'home'}" class="navbar-brand">Tomar</router-link>
+      <router-link :to="{ name: 'home' }" class="navbar-brand"
+        >Tomar</router-link
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -27,10 +29,12 @@
           </li>
           <!-- If not authenticated -->
           <li class="nav-item">
-            <router-link :to="{name: 'login'}" class="nav-link">Sign in</router-link>
+            <router-link :to="{ name: 'login' }" class="nav-link"
+              >Sign in</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link :to="{name: 'register'}" class="nav-link" id="signup"
+            <router-link :to="{ name: 'register' }" class="nav-link" id="signup"
               >Get Started</router-link
             >
           </li>
