@@ -23,8 +23,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .main {
+  padding: 0;
   background: rgb(250, 250, 250);
 }
 </style>

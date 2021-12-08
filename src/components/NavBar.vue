@@ -1,10 +1,12 @@
 <template>
   <nav
-    class="navbar navbar-expand-lg navbar-light bg-white mynav"
+    class="navbar navbar-expand-lg navbar-light bg-white fixed-top mynav"
     aria-label="My nav bar"
   >
     <div class="container">
-      <router-link :to="{name: 'home'}" class="navbar-brand">Tomar</router-link>
+      <router-link :to="{ name: 'home' }" class="navbar-brand"
+        >Tomar</router-link
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -27,10 +29,12 @@
           </li>
           <!-- If not authenticated -->
           <li class="nav-item">
-            <router-link :to="{name: 'login'}" class="nav-link">Sign in</router-link>
+            <router-link :to="{ name: 'login' }" class="nav-link"
+              >Sign in</router-link
+            >
           </li>
           <li class="nav-item">
-            <router-link :to="{name: 'register'}" class="nav-link" id="signup"
+            <router-link :to="{ name: 'register' }" class="nav-link" id="signup"
               >Get Started</router-link
             >
           </li>
@@ -47,7 +51,6 @@ export default {
 </script>
 <style scoped>
 .mynav {
-  background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 2px 2px -1px rgba(22, 16, 16, 0.2);
   padding: 12px;
 }
