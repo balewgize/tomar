@@ -4,9 +4,9 @@ import SignupForm from "../components/SignupForm";
 import PostList from '../components/PostList'
 
 const routes = [
-  { path: "/", component: PostList },
-  { path: "/login", component: LoginForm },
-  { path: "/register", component: SignupForm },
+  { path: "/", name: "home",component: PostList },
+  { path: "/login", name: "login", component: LoginForm },
+  { path: "/register", name: "register", component: SignupForm },
 ];
 
 const router = createRouter({

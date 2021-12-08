@@ -67,7 +67,7 @@
               <hr class="my-4" />
               <div>
                 Don't have an account? &nbsp;
-                <router-link to="/register"> Register</router-link>
+                <router-link :to="{name: 'register'}"> Register</router-link>
               </div>
             </form>
           </div>

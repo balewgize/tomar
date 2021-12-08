@@ -92,7 +92,7 @@
               <hr class="my-4" />
               <div>
                 Already have an account? &nbsp;
-                <router-link to="/login"> Sign in</router-link>
+                <router-link :to="{name: 'login'}"> Sign in</router-link>
               </div>
             </form>
           </div>
