@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar navbar-expand-lg navbar-light bg-white mynav"
+    class="navbar navbar-expand-lg navbar-light bg-white fixed-top mynav"
     aria-label="My nav bar"
   >
     <div class="container">
@@ -51,7 +51,6 @@ export default {
 </script>
 <style scoped>
 .mynav {
-  background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 2px 2px -1px rgba(22, 16, 16, 0.2);
   padding: 12px;
 }
