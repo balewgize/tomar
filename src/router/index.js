@@ -6,7 +6,7 @@ import PostDetail from '../views/PostDetail.vue'
 
 const routes = [
   { path: "/", name: "home", component: Home },
-  { path:"/post", name:  "post-detail", component: PostDetail },
+  { path: "/post", name:  "post-detail", component: PostDetail },
   { path: "/login", name: "login", component: Login },
   { path: "/register", name: "register", component: Register },
 ];

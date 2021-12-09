@@ -23,7 +23,10 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Merriweather, Merriweather-sans;
+}
+a {
+  text-decoration: none;
 }
 .main {
   padding: 0;
