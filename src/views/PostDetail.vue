@@ -4,10 +4,12 @@
       <div class="col-lg-7 mx-auto">
         <article class="blog-post">
           <h1 class="post-title">Form validation using Vue.js 3</h1>
-          <div class="text-muted d-flex justify-content-between">
-            <div>
+          <div
+            class="text-muted d-flex align-items-end justify-content-between"
+          >
+            <div class="">
               <span>Nov 12</span><span class="dot"></span>
-              <span>5 min read</span> <span class="dot"></span>
+              <span>5 min read</span>
             </div>
             <div class="action">
               <button>
@@ -15,9 +17,9 @@
               </button>
             </div>
           </div>
-          <div class="post-image mt-4 mb-5">
+          <div class="post-image my-4">
             <img
-              src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dnVlLmpzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+              src="http://placehold.jp/1200x630.png"
               alt=""
               class="image-fluid"
             />
@@ -132,7 +134,7 @@ export default {
 <style scoped>
 .post-content {
   font-family: Merriweather;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -144,7 +146,7 @@ export default {
 }
 .post-title {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 .blog-post-meta {
@@ -197,5 +199,10 @@ ul.tags li a:hover {
 }
 .action button:hover {
   cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .post-title {
+    font-size: 3rem;
+  }
 }
 </style>
