@@ -99,7 +99,9 @@
               <div
                 class="d-flex align-items-start justify-content-md-between mb-2"
               >
-                <a href="#" class="author-link me-2">Alemnew Marie</a>
+                <router-link :to="{ name: 'profile' }" class="author-link me-2"
+                  >Alemnew Marie</router-link
+                >
                 <button class="btn btn-sm btn-secondary follow">Follow</button>
               </div>
               <div class="text-muted pe-md-5 bio">
@@ -182,7 +184,7 @@ ul.tags li a:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 .follow {
-  padding: 4px 20px;
+  padding: 2px 10px;
   border-radius: 15px;
 }
 .bio {

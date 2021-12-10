@@ -3,15 +3,19 @@
     <div class="flex-grow-1 me-md-3 g-0 h-md-250">
       <div class="pt-3 d-flex flex-column">
         <div class="d-inline-block mb-1">
-          <img
-            src="https://randomuser.me/api/portraits/women/29.jpg"
-            class="rounded-circle me-2 avatar"
-            alt="@"
-          />
-          <a href="#" class="author-link">Alemnew Marie</a>
+          <router-link :to="{ name: 'profile' }"
+            ><img
+              src="https://randomuser.me/api/portraits/women/29.jpg"
+              class="rounded-circle me-2 avatar"
+              alt="@"
+          /></router-link>
+          <router-link :to="{ name: 'profile' }" class="author-link"
+            >Alemnew Marie</router-link
+          >
         </div>
         <router-link :to="{ name: 'post-detail' }" class="mb-1 lh-sm post-title"
-          >How to validate forms on client side using Vue.js
+          >How to validate forms on client side using Vue.js and show errors to
+          the user
         </router-link>
         <router-link
           :to="{ name: 'post-detail' }"
@@ -35,7 +39,7 @@
             <a class="d-none d-md-inline category-btn" href="#">Programming</a>
           </div>
           <div class="action">
-            <button>
+            <button title="Bookmark story">
               <img src="/assets/bookmark-plus.svg" class="icon" alt="" />
             </button>
           </div>
