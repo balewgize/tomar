@@ -67,7 +67,7 @@ export default {
   },
   data() {
     return {
-      showHero: false,
+      showHero: true,
     };
   },
 };

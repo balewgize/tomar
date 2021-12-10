@@ -4,7 +4,7 @@
     aria-label="My nav bar"
   >
     <div class="container">
-      <router-link :to="{ name: 'home' }" class="navbar-brand"
+      <router-link :to="{ name: 'home' }" class="navbar-brand fw-bold"
         >Tomar</router-link
       >
       <button

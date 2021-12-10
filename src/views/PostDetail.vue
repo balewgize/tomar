@@ -113,13 +113,19 @@
     <div class="related mt-5">
       <h3>More from Tomar</h3>
       <hr class="my-4" />
+      <RelatedPostItem />
     </div>
   </div>
 </template>
 
 <script>
+import RelatedPostItem from "../components/RelatedPostItem.vue";
+
 export default {
   name: "PostDetail",
+  components: {
+    RelatedPostItem,
+  },
 };
 </script>
 
