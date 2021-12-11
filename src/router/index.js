@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home";
-import Login from "../views/Login.vue";
-import Register from "../views/Register.vue";
-import PostDetail from "../views/PostDetail.vue";
-import Profile from "../views/Profile.vue";
+import Login from "../views/Login";
+import Register from "../views/Register";
+import PostDetail from "../views/PostDetail";
+import Profile from "../views/Profile";
+import PostForm from "../views/PostForm";
 
 const routes = [
   { path: "/", name: "home", component: Home },
@@ -11,6 +12,7 @@ const routes = [
   { path: "/login", name: "login", component: Login },
   { path: "/register", name: "register", component: Register },
   { path: "/author", name: "profile", component: Profile },
+  { path: "/write", name: "write", component: PostForm },
 ];
 
 const router = createRouter({

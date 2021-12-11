@@ -40,7 +40,9 @@
       <!-- Author posts -->
       <div class="col-12 col-lg-7 mx-auto">
         <div class="p-image">
-          <img src="http://placehold.jp/1200x630.png" alt="" />
+          <router-link :to="{name: 'post-detail'}"
+            ><img src="http://placehold.jp/1200x630.png" alt=""
+          /></router-link>
         </div>
         <div class="pt-4 mb-3">
           <div class="d-flex flex-column">

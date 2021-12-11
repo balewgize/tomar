@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-5 pb-5">
+  <div class="container py-4">
     <div class="row">
       <div class="col-lg-7 mx-auto">
         <article class="blog-post">
@@ -7,16 +7,38 @@
           <div
             class="text-muted d-flex align-items-end justify-content-between"
           >
-            <div class="">
-              <span>Nov 12</span><span class="dot"></span>
-              <span>5 min read</span>
+            <div class="d-flex">
+              <div class="avatar me-2">
+                <img
+                  src="https://randomuser.me/api/portraits/women/29.jpg"
+                  alt=""
+                  class="rounded-circle"
+                />
+              </div>
+              <div>
+                <div class="d-flex align-items-end">
+                  <router-link
+                    :to="{ name: 'profile' }"
+                    class="a-link a-link-sm me-2"
+                    >Alemnew Marie</router-link
+                  >
+                  <button class="btn btn-sm btn-secondary follow">
+                    Follow
+                  </button>
+                </div>
+                <div class="text-muted">
+                  <span>Nov 12</span><span class="dot"></span>
+                  <span>5 min read</span>
+                </div>
+              </div>
             </div>
             <div class="action">
-              <button>
+              <button title="Bookmark story">
                 <img src="/assets/bookmark-plus.svg" class="icon" alt="" />
               </button>
             </div>
           </div>
+
           <div class="post-image my-4">
             <img
               src="http://placehold.jp/1200x630.png"
@@ -99,7 +121,9 @@
               <div
                 class="d-flex align-items-start justify-content-md-between mb-2"
               >
-                <router-link :to="{ name: 'profile' }" class="author-link me-2"
+                <router-link
+                  :to="{ name: 'profile' }"
+                  class="a-link a-link-lg me-2"
                   >Alemnew Marie</router-link
                 >
                 <button class="btn btn-sm btn-secondary follow">Follow</button>
@@ -134,6 +158,9 @@ export default {
 </script>
 
 <style scoped>
+.t-hero {
+  background: #eae7dc;
+}
 .post-content {
   font-family: Merriweather;
   font-size: 1.1rem;
@@ -143,7 +170,7 @@ export default {
 .post-content p {
   margin: 0 0 1.5rem 0;
 }
-.post-image img {
+img {
   width: 100%;
 }
 .post-title {
@@ -178,10 +205,12 @@ ul.tags li a:hover {
   width: 100%;
   height: 100%;
 }
-.author-link {
+.a-link {
   color: #333;
-  font-size: 1.2rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+.a-link-lg {
+  font-size: 1.2rem;
 }
 .follow {
   padding: 2px 10px;
@@ -206,5 +235,9 @@ ul.tags li a:hover {
   .post-title {
     font-size: 3rem;
   }
+}
+.avatar {
+  width: 40px;
+  height: 40px;
 }
 </style>
