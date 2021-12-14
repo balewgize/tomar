@@ -9,13 +9,12 @@
               class="rounded-circle me-2 avatar"
               alt="@"
           /></router-link>
-          <router-link :to="{ name: 'profile' }" class="author-link"
-            >Alemnew Marie</router-link
-          >
+          <router-link :to="{ name: 'profile' }" class="author-link">{{
+            post.user.username
+          }}</router-link>
         </div>
         <router-link :to="{ name: 'post-detail' }" class="mb-1 lh-sm post-title"
-          >How to validate forms on client side using Vue.js and show errors to
-          the user
+          >{{ post.title }}
         </router-link>
         <router-link
           :to="{ name: 'post-detail' }"
@@ -36,11 +35,18 @@
           <div>
             <span>Nov 12</span><span class="dot"></span><span>5 min read</span>
             <span class="d-none d-md-inline dot"></span>
-            <a class="d-none d-md-inline category-btn" href="#">Programming</a>
+            <a class="d-none d-md-inline category-btn" href="#">{{
+              post.category
+            }}</a>
           </div>
           <div class="action">
             <button title="Bookmark story">
-              <img src="/assets/bookmark-plus.svg" class="icon" alt="" />
+              <img
+                src="/assets/bookmark-plus.svg"
+                @click="this.$emit('toggle-bookmark', post.id)"
+                class="icon"
+                alt=""
+              />
             </button>
           </div>
         </div>
@@ -48,7 +54,7 @@
     </div>
     <div class="flex-shrink-0 mx-auto p-image">
       <router-link :to="{ name: 'post-detail' }">
-        <img src="http://placehold.jp/1200x630.png" alt="" />
+        <img :src="post.image" alt="" />
       </router-link>
     </div>
   </div>
@@ -58,6 +64,10 @@
 <script>
 export default {
   name: "PostListItem",
+  props: {
+    post: Object,
+  },
+  emits: ["toggle-bookmark"],
 };
 </script>
 

@@ -34,7 +34,12 @@
             </div>
             <div class="action">
               <button title="Bookmark story">
-                <img src="/assets/bookmark-plus.svg" class="icon" alt="" />
+                <img
+                  src="/assets/bookmark-plus.svg"
+                  @click="toggleBookmark"
+                  class="icon"
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -153,6 +158,18 @@ export default {
   name: "PostDetail",
   components: {
     RelatedPostItem,
+  },
+  props: {
+    post: Object,
+  },
+  emits: ["toggle-bookmark"],
+  methods: {
+    toggleBookmark() {
+      // get the id of selected post from state of the app
+      const selectedPost = 10; // just for now
+      this.$emit("toggle-bookmark", selectedPost);
+      console.log("toggle bookmark from post detail ", selectedPost);
+    },
   },
 };
 </script>

@@ -4,11 +4,12 @@
     <div class="container pt-5">
       <div class="row">
         <div class="col-lg-7">
-          <PostListItem />
-          <PostListItem />
-          <PostListItem />
-          <PostListItem />
-          <PostListItem />
+          <PostListItem
+            v-for="post in posts"
+            :post="post"
+            :key="post.id"
+            @toggle-bookmark="toggleBookmark"
+          />
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-4 d-none d-lg-block">
@@ -26,17 +27,6 @@
               <h4>Explore categories</h4>
               <ol class="list-unstyled mb-0">
                 <li><a href="#">March 2021</a></li>
-                <li><a href="#">February 2021</a></li>
-                <li><a href="#">January 2021</a></li>
-                <li><a href="#">December 2020</a></li>
-                <li><a href="#">November 2020</a></li>
-                <li><a href="#">October 2020</a></li>
-                <li><a href="#">September 2020</a></li>
-                <li><a href="#">August 2020</a></li>
-                <li><a href="#">July 2020</a></li>
-                <li><a href="#">June 2020</a></li>
-                <li><a href="#">May 2020</a></li>
-                <li><a href="#">April 2020</a></li>
               </ol>
             </div>
 
@@ -65,11 +55,46 @@ export default {
     Hero,
     PostListItem,
   },
+  emits: ["toggle-bookmark"],
   data() {
     return {
       showHero: true,
+      posts: [
+        {
+          id: 1,
+          title: "this is post title",
+          content: "this is post content",
+          image: "http://placehold.jp/150x150.png",
+          user: {
+            id: 23,
+            username: "alex",
+          },
+          category: "Programming",
+        },
+        {
+          id: 2,
+          title: "this is post title 2",
+          content: "this is post content 2",
+          image: "http://placehold.jp/150x150.png",
+          user: {
+            id: 26,
+            username: "admin",
+          },
+          category: "Web Development",
+        },
+      ],
     };
   },
+  methods: {
+    toggleBookmark(postId) {
+      this.$emit("toggle-bookmark", postId);
+      console.log("toggle bookmark at Home.vue ", postId);
+    },
+  },
+  // async created() {
+  //   const response = await fetch("http://127.0.0.1:8000/blog/posts/");
+  //   this.posts = await response.json();
+  // },
 };
 </script>
 <style scoped>

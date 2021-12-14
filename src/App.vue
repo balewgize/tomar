@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <div class="container-fluid main">
-      <router-view></router-view>
+      <router-view @toggle-bookmark="toggleBookmark"></router-view>
     </div>
   </div>
 </template>
@@ -14,6 +14,13 @@ export default {
   name: "App",
   components: {
     NavBar,
+  },
+  methods: {
+    toggleBookmark(postId) {
+      // send AJAX request to toggle bookmark
+      // change style of the icon
+      console.log("user bookmark from App.vue", postId);
+    },
   },
 };
 </script>

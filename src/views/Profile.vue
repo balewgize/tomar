@@ -79,7 +79,7 @@
             </div>
             <div class="action">
               <button title="Bookmark story">
-                <img src="/assets/bookmark-plus.svg" class="icon" alt="" />
+                <img src="/assets/bookmark-plus.svg" @click="this.$emit('toggle-bookmark', 7)" class="icon" alt="" />
               </button>
             </div>
           </div>
